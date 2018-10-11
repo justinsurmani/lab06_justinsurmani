@@ -103,16 +103,18 @@ void copyElements(int *dest, int *src, int n) {
 
 int copyOddOnly(int *dest, int *src, int n) {
  	int count=0;
+	int num= src[0];
 	for(int i=0; i<n; i++){
-		int num = src[i];
+		 num = src[i];
+		if(num!=0){
 		if(num<0)
 		{num=num*-1;}
 		if(num%2==1)
 		{
-			dest[i]=src[i];
+			dest[count]=src[i];
 			count++;
 		}
-	}
+	}}
   return count;  
 }
 
